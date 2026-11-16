@@ -218,3 +218,27 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Smart City Emergency Edge Platform
+# Gateway-generated private identity and cryptographic keys
+.gateway_identity/
+**/.gateway_identity/
+*_private.bin
+
+# Local SQLite incident databases
+sos_gateway.db
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Local secrets and configurations
+.env.*
+!.env.example
+
+# Editor-specific local settings
+.vscode/
+.idea/
