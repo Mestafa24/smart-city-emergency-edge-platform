@@ -26,31 +26,35 @@ The graduation demonstration used **two Android phones**, **one Raspberry Pi 4B*
 
 **Important scope:** This prototype demonstrates **one Raspberry Pi gateway**. Automatically synchronizing independent gateways across a city is **not yet implemented**.
 
-## Screenshots and demonstration
+## Screenshots and Demonstration
 
-### Responder dashboard
+### Responder Dashboard
 
-> **[PLACEHOLDER — Dashboard screenshot]**  
-> Add `docs/assets/dashboard.png` and replace this note with:  
-> `![Local responder dashboard showing incidents](docs/assets/dashboard.png)`
+The local Flask dashboard provides responders with incident information through a structured table view and a geographical map with hotspot detection.
+
+| Incident Table View | Incident Map View |
+|:---:|:---:|
+| <img src="docs/assets/tableui.png" alt="Responder dashboard incident table" width="600"> | <img src="docs/assets/mapui.png" alt="Responder dashboard incident map and hotspots" width="600"> |
 
 ### SOS and Safety Copilot on Android
 
-> **[PLACEHOLDER — SOS / Copilot screenshot]**  
-> Add `docs/assets/sos-copilot.png` and replace this note with:  
-> `![SOS reporting and Safety Copilot conversation](docs/assets/sos-copilot.png)`
+The modified BitChat Android application enables users to send structured SOS reports and interact with the rule-based Safety Copilot through predefined follow-up questions.
 
-### Demo video
+| SOS Messaging Interface | Safety Copilot Interface |
+|:---:|:---:|
+| <img src="docs/assets/sosui.png" alt="Android SOS messaging interface" width="420"> | <img src="docs/assets/copilotui.png" alt="Android Safety Copilot interface" width="420"> |
 
-> **[PLACEHOLDER — End-to-end demo video]**  
-> Add a public or unlisted, viewer-accessible video link here, for example:  
-> `[Watch the end-to-end demonstration](YOUR_VIDEO_URL)`
+### End-to-End Demonstration
 
-*Use test data and blur any real names, identifiers, and precise personal locations in screenshots or videos.*
+The following video demonstrates the prototype's end-to-end workflow, from SOS reporting through the modified BitChat Android client to incident processing on the Raspberry Pi edge gateway and visualization on the responder dashboard.
+
+🎥 **[Watch the Project Demonstration on YouTube](https://www.youtube.com/watch?v=dOo4ODE91qo)**
+
+*Note: This is an academic prototype demonstration, not a validated emergency-response deployment.*
 
 ## Source repositories
 
-- **Raspberry Pi gateway and responder dashboard:** This repository.
+- **Raspberry Pi gateway and responder dashboard:** Raspberry Pi gateway, Safety Copilot, incident database, and dashboard source code (included in this repository).
 - **Modified Android client:** [Mestafa24/bitchat-android](https://github.com/Mestafa24/bitchat-android).
 - **Original upstream Android project:** [permissionlesstech/bitchat-android](https://github.com/permissionlesstech/bitchat-android).
 
@@ -118,7 +122,7 @@ From a browser on the same local network, visit:
 
 The listener and dashboard share the relative path `sos_gateway.db`, so they should be launched with the same working directory. The database and `.gateway_identity/` key files are generated locally and **must not be committed**.
 
-> These are developer-oriented starting instructions. Dependency import checks on a laptop do **not** replace running and testing the BLE gateway on a Raspberry Pi.
+> These are developer-oriented starting instructions. Dependency import checks on a PC do **not** replace running and testing the BLE gateway on a Raspberry Pi.
 
 ## Offline behavior and current limitations
 
